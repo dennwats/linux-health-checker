@@ -1,6 +1,4 @@
-# .github/workflows/ci.yml
 name: CI
-
 on: [push, pull_request]
 
 jobs:
@@ -11,7 +9,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Run ShellCheck
-        uses: azohra/shellcheck-action@v1
+        uses: ludeeus/action-shellcheck@master
         with:
-          path: src
+          scandir: src
 
