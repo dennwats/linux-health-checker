@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+# System Health Checker  v0.1
+# Usage: ./health-check.sh
+set -euo pipefail
+trap 'echo "[${DATE}] ☠️  Script aborted"; exit 1' ERR
+
+echo "=== System Health Report ==="
+echo "Timestamp : $(date)"
+echo "Hostname  : $(hostname)"
+echo "Uptime    : $(uptime -p)"
+echo
+echo "---- Memory ----"
+free -h | grep Mem
+echo
+echo "---- Disk (/) ----"
+df -h / | tail -1
+echo
+echo "---- CPU Load (1/5/15) ----"
+cut -d' ' -f1-3 /proc/loadavg
+echo "=== End Report ==="
+
