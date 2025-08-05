@@ -2,6 +2,7 @@
 # System Health Checker  v0.1
 # Usage: ./health-check.sh
 set -euo pipefail
+DATE=$(date)
 trap 'echo "[${DATE}] ☠️  Script aborted"; exit 1' ERR
 
 echo "=== System Health Report ==="
