@@ -19,4 +19,13 @@ echo
 echo "---- CPU Load (1/5/15) ----"
 cut -d' ' -f1-3 /proc/loadavg
 echo "=== End Report ==="
+echo
+echo "---- Network ----"
+if ping -c1 -W1 8.8.8.8 >/dev/null 2>&1; then
+  echo "Ping to 8.8.8.8 ✓"
+else
+  echo "Ping to 8.8.8.8 ✗"
+fi
+sshd_status=$(systemctl is-active sshd || true)
+echo "sshd service status : $sshd_status"
 
