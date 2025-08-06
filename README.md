@@ -33,3 +33,8 @@ Mem:            16Gi       1.4Gi        14Gi        22Mi       922Mi        14Gi
 Ping to 8.8.8.8 ✓
 sshd service status : active
 
+## New Features (v0.2)
+
+- Color-coded output (yellow headers, green ✓, red ✗)
+- Daily log written to `/tmp/health-YYYYMMDD.log`
+
