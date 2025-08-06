@@ -36,10 +36,4 @@ fi
 sshd_status=$(systemctl is-active sshd || true)
 echo "sshd service status : $sshd_status"
 
-echo -e "${YLW}---- Network ----${NRM}"
-if ping -c1 -W1 8.8.8.8 >/dev/null 2>&1; then
-  echo -e "Ping to 8.8.8.8 ${GRN}✓${NRM}"
-else
-  echo -e "Ping to 8.8.8.8 ${RED}✗${NRM}"
-fi
 
