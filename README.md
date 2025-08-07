@@ -7,7 +7,7 @@
 > **Drafted with GitHub Copilot.**
 
 ## Quick Start
-
+```bash
 git clone https://github.com/dennwats/linux-health-checker.git
 cd linux-health-checker
 bash src/health-check.sh
